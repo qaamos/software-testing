@@ -2,6 +2,8 @@ import chai from "chai";
 import add from "../src/add.js";
 const expect = chai.expect;
 
+// Juho
+
 describe("Add", () => {
     it("adds two integers", () => {
         expect(add(12,24)).to.equal(36);
