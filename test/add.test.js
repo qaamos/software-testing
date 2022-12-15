@@ -11,12 +11,12 @@ describe("Add", () => {
     it("adds two floats", () => {
         expect(add(4.5, 6.2)).to.equal(10.7);
     });
-/*
-    it("throws exception with NaN input", () => {
-        expect(add("football", 2022)).to.throw(Error);
-    });
-*/
+
     it("adds negative numbers", () => {
         expect(add(10,-2)).to.equal(8);
+    });
+
+    it("throws exception with NaN input", () => {
+        expect(() => add("football", 2022)).to.throw();
     });
 });
