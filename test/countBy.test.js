@@ -4,22 +4,24 @@ const expect = chai.expect;
 
 // Juho
 
-const football_team = [
-    {'player': 'Messi', 'position': 'forward'},
-    {'player': 'Ronaldo', 'position': 'forward'},
-    {'player': 'Modric', 'position': 'midfield'},
-    {'player': 'Guimaraes', 'position': 'midfield'},
-    {'player': 'Kane', 'position': 'forward'},
-    {'player': 'Simon', 'position': 'goalkeeper'}
+const shopping_cart = [
+    {'item': 'tomato', 'supplier': 'Teuvo'},
+    {'item': 'tomato', 'supplier': 'Matti'},
+    {'item': 'tomato', 'supplier': 'Teuvo'},
+    {'item': 'olive', 'supplier': 'Teuvo'},
+    {'item': 'tomato', 'supplier': 'Teuvo'},
+    {'item': 'olive', 'supplier': 'Matti'}
 ];
 
 describe("countBy", () => {
-    const result = {'forward': 3, 'midfield': 2, 'goalkeeper': 1};
+    var result = {'Teuvo': 4, 'Matti': 2};
     it("reutrns correct number of appearences per value", () => {
-        expect(countBy(football_team, value => value.position)).to.equal(result);
+        expect(countBy(shopping_cart, value => value.supplier)).to.equal(result);
+        result = {'tomato': 4, 'olive': 2};
+        expect(countBy(football_team, value => value.item)).to.equal(result);
     });
-
+    
     it("throws an exception when value doesn't exist", () => {
-        expect(() => countBy(football_team, value => value.shoebrand)).to.throw();
+        expect(() => countBy(shopping_cart, value => value.color)).to.eql({});
     });
 });

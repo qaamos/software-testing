@@ -2,7 +2,7 @@ import chai from "chai";
 import isObjectLike from "../src/isObjectLike.js";
 const expect = chai.expect;
 
-//Juho 
+// Juho 
 
 describe("isObjectLike", () => {
     it("should return true if type of input is an object", () => {

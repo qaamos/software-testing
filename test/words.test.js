@@ -14,8 +14,8 @@ describe("words", () => {
     });
 
     it("returns correct words from a sentence if a pattern is given", () => {
-        expect(words("Tämä on vettä. No niin ilmeisesti on." , /[^. ]+/g)).to.eql(
-            ["Tämä", "on", "vettä", "No", "niin", "ilmeisesti", "on"]);
+        expect(words("I want to buy some apples. Ok, there you go." , /[^., ]+/g)).to.eql(
+            ["I", "want", "to", "buy", "some", "apples", "Ok", "there", "you", "go"]);
     });
 
     it("throws an exception with non-string input", () => {
