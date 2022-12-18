@@ -15,7 +15,6 @@ describe("Add", () => {
     it("adds negative numbers", () => {
         expect(add(10,-2)).to.equal(8);
     });
-
     it("throws exception with NaN input", () => {
         expect(() => add("football", 2022)).to.throw();
     });

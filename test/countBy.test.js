@@ -22,6 +22,6 @@ describe("countBy", () => {
     });
     
     it("throws an exception when value doesn't exist", () => {
-        expect(() => countBy(shopping_cart, value => value.color)).to.eql({});
+        expect(() => countBy(shopping_cart, value => value.color)).to.throw();
     });
 });
