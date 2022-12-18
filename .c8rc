@@ -1,3 +1,4 @@
  {
-  "reporter": ["text","lcov"]
+  "reporter": ["text","lcov"],
+  "include": ["src/add.js","src/ceil.js","src/countBy.js","src/filter.js","src/isArrayLike.js","src/isDate.js","src/isLength.js","src/isObjectLike.js","src/keys.js","src/words.js"]
 }
